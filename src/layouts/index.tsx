@@ -13,15 +13,15 @@ type Props = {
 const Layouts = (props: Props) => {
   const { children } = props;
   return (
-    <div>
+    <div className="bg-black">
       <div className="bg-black flex flex-row py-2">
         <div className="flex flex-row py-2 pl-4">
           <img className="w-[30px] mr-1" src={tiktokLogo} alt="logo" />
           <strong className="text-white text-3xl font-sans">TikTok</strong>
         </div>
-        <div className="flex flex-row rounded-[50px] bg-neutral-700 px-3 items-center w-[35%] m-auto my-0 hover:border-2 hover:border-gray-500">
+        <div className="flex flex-row rounded-[50px] bg-neutral-700 px-3 items-center w-[35%] m-auto my-0 border-transparent border-2 hover:border-gray-500">
           <input
-            className="bg-inherit placeholder:text-gray-200 placeholder:text-[18px] w-[100%] border-r-[1px] border-r-gray-400 mr-2 ml-2"
+            className="text-white focus:outline-none bg-inherit placeholder:text-gray-200 placeholder:text-[18px] w-[100%] border-r-[1px] border-r-gray-400 mr-2 ml-2"
             placeholder="Search"
           />
           <SearchIcon className="text-gray-400" style={{ fontSize: 30 }} />
@@ -42,8 +42,8 @@ const Layouts = (props: Props) => {
           />
         </div>
       </div>
-      <div className="contents">
-        <div className="bg-black w-[18%]">
+      <div className="flex">
+        <div className="bg-black w-[18%] overflow-scroll" style={{ height: 'calc(100vh - 68px)' }}>
           <LeftMenu />
           <div className="ml-4 pr-5 mt-4">
             <p className="text-gray-500 font-medium">
@@ -112,7 +112,7 @@ const Layouts = (props: Props) => {
             </a>
           </div>
         </div>
-        <div>{children}</div>
+        <div className="grow overflow-scroll" style={{ height: 'calc(100vh - 68px)' }}>{children}</div>
       </div>
     </div>
   );

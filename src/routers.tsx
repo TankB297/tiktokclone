@@ -6,7 +6,7 @@ import Layouts from "./layouts/index.tsx";
 const Routers: React.FC = () => (
   <BrowserRouter>
     <Layouts>
-      <Routes>{/* <Route path="/" element={<ForYouPage />} /> */}</Routes>
+      <Routes><Route path="/" element={<ForYouPage />} /></Routes>
     </Layouts>
   </BrowserRouter>
 );
