@@ -1,9 +1,9 @@
 import React from "react";
-import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import tiktokLogo from "../assets/tiktok-logo.svg";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddIcon from "@mui/icons-material/Add";
+import { LeftMenu } from "../components/layouts/LeftMenu.tsx";
 
 type Props = {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ type Props = {
 const Layouts = (props: Props) => {
   const { children } = props;
   return (
-    <div className="">
+    <div>
       <div className="bg-black flex flex-row py-2">
         <div className="flex flex-row py-2 pl-4">
           <img className="w-[30px] mr-1" src={tiktokLogo} alt="logo" />
@@ -32,7 +32,7 @@ const Layouts = (props: Props) => {
           </div>
           <div className="bg-red-600 hover:bg-red-700 py-2 rounded-md ml-[15px] w-[120px]">
             <p className="font-medium text-center text-white text-[18px]">
-              Login
+              Log in
             </p>
           </div>
           <MoreVertIcon
@@ -42,7 +42,15 @@ const Layouts = (props: Props) => {
         </div>
       </div>
       <div className="contents">
-        <div className="left-menu">left</div>
+        <div className="bg-black w-1/6">
+          <LeftMenu />
+          <p className="text-gray-500 ml-4 mr-3 mt-4">
+            Log in to follow creators, like videos, and view comments.
+          </p>
+          <div className="bg-gray-800 p-3 border-2 border-red-500 mt-5 w-[85%] m-auto">
+            <p className="text-red-500 text-center text-lg">Log in</p>
+          </div>
+        </div>
         <div>{children}</div>
       </div>
     </div>
