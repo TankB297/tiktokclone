@@ -14,7 +14,7 @@ const Layouts = (props: Props) => {
   const { children } = props;
   return (
     <div className="bg-black">
-      <div className="bg-black flex flex-row py-2">
+      <div className="bg-black flex flex-row py-2 border-b-[1px] border-b-gray-700">
         <div className="flex flex-row py-2 pl-4">
           <img className="w-[30px] mr-1" src={tiktokLogo} alt="logo" />
           <strong className="text-white text-3xl font-sans">TikTok</strong>
@@ -43,9 +43,12 @@ const Layouts = (props: Props) => {
         </div>
       </div>
       <div className="flex">
-        <div className="bg-black w-[18%] overflow-scroll" style={{ height: 'calc(100vh - 68px)' }}>
+        <div
+          className="bg-black w-[250px] overflow-scroll"
+          style={{ height: "calc(100vh - 68px)" }}
+        >
           <LeftMenu />
-          <div className="ml-4 pr-5 mt-4">
+          <div className="ml-4 mt-4 w-[200px]">
             <p className="text-gray-500 font-medium">
               Log in to follow creators, like videos, and view comments.
             </p>
@@ -112,7 +115,12 @@ const Layouts = (props: Props) => {
             </a>
           </div>
         </div>
-        <div className="grow overflow-scroll" style={{ height: 'calc(100vh - 68px)' }}>{children}</div>
+        <div
+          className="grow overflow-scroll"
+          style={{ height: "calc(100vh - 68px)" }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );
