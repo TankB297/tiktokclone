@@ -3,9 +3,11 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 interface Props {
   imageName: string;
+  userName: string;
+  id: string;
 }
 
-export const User = ({ imageName }: Props) => {
+export const User = ({ imageName, userName, id }: Props) => {
   return (
     <div className="w-[226px] h-[302px] text-white relative">
       <img
@@ -19,9 +21,9 @@ export const User = ({ imageName }: Props) => {
           className="w-[55px] h-[55px] rounded-full mb-5"
           alt="avatar-user-small"
         />
-        <strong className="text-[18px]">CrisDevilGamer</strong>
+        <strong className="text-[18px]">{userName}</strong>
         <div className="flex flex-row items-center">
-          <strong className="text-[16px] mr-[2px]">crisdevilgamer7</strong>
+          <strong className="text-[16px] mr-[2px]">{id}</strong>
           <CheckCircleIcon
             className="text-teal-200"
             style={{ fontSize: "16px" }}
