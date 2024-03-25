@@ -9,7 +9,13 @@ import ShareIcon from "@mui/icons-material/Share";
 import Action from "./Action.tsx";
 import { ModalComponent } from "../layouts/Modal.tsx";
 
-const Post = () => {
+interface Props {
+  videoURL: string;
+  userName: string;
+  note: string;
+}
+
+const Post = ({ videoURL, userName, note }: Props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
@@ -23,10 +29,13 @@ const Post = () => {
         <div className="flex">
           <div className="grow">
             <div>
-              <span className="font-bold">music63286</span>
-              <span className="text-[12px]"> Music</span>
+              <span className="font-bold">{userName}</span>
+              <span className="text-[12px]"> {note}</span>
             </div>
-            <div>Alam ko na hindi ako ang para sayo</div>
+            <div>Alam ko na hindi ako ang para sayo </div>
+            <strong className="text-blue-400">
+              #viral #fyp #xuhuong #tiktok #capcut
+            </strong>
             <div className="flex items-center opacity-80">
               <MusicNoteRoundedIcon fontSize="small" />
               <div className="text-[14px]">nhạc nền - VietZ</div>
@@ -39,7 +48,7 @@ const Post = () => {
           </div>
         </div>
         <div className="rounded-lg w-[300px] mt-3 flex">
-          <video src={video} className="rounded-lg w-100" controls />
+          <video src={videoURL} className="rounded-lg w-100" controls />
           <div className="flex flex-col justify-end ms-4 gap-2">
             <Action
               onClick={() => setIsModalVisible(true)}
