@@ -7,6 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { LeftMenu } from "../components/layouts/LeftMenu.tsx";
 import { MenuHover } from "../components/layouts/MenuHover.tsx";
 import { ModalComponent } from "../components/layouts/Modal.tsx";
+import { Link } from "react-router-dom";
 
 type Props = {
   children: React.ReactNode;
@@ -20,10 +21,10 @@ const Layouts = (props: Props) => {
   return (
     <div className="bg-black">
       <div className="bg-black flex flex-row py-2 border-b-[1px] border-b-gray-700">
-        <div className="flex flex-row py-2 pl-4">
+        <Link to={"/"} className="flex flex-row py-2 pl-4 cursor-pointer">
           <img className="w-[30px] mr-1" src={tiktokLogo} alt="logo" />
           <strong className="text-white text-3xl font-sans">TikTok</strong>
-        </div>
+        </Link>
         <div className="flex flex-row rounded-[50px] bg-neutral-700 px-3 items-center w-[35%] m-auto my-0 border-transparent border-2 hover:border-gray-500">
           <input
             className="text-white focus:outline-none bg-inherit placeholder:text-gray-200 placeholder:text-[18px] w-[100%] border-r-[1px] border-r-gray-400 mr-2 ml-2"
