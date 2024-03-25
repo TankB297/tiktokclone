@@ -6,6 +6,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddIcon from "@mui/icons-material/Add";
 import { LeftMenu } from "../components/layouts/LeftMenu.tsx";
 import { MenuHover } from "../components/layouts/MenuHover.tsx";
+import { ModalComponent } from "../components/layouts/Modal.tsx";
 
 type Props = {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ type Props = {
 const Layouts = (props: Props) => {
   const { children } = props;
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className="bg-black">
@@ -34,7 +36,10 @@ const Layouts = (props: Props) => {
             <AddIcon className="text-white" style={{ fontSize: "25px" }} />
             <p className="font-medium text-white text-[18px] ml-2">Upload</p>
           </div>
-          <div className="bg-red-600 hover:bg-red-700 py-2 rounded-md ml-[15px] w-[120px]">
+          <div
+            onClick={() => setIsModalVisible(true)}
+            className="bg-red-600 hover:bg-red-700 py-2 rounded-md ml-[15px] w-[120px]"
+          >
             <p className="font-medium text-center text-white text-[18px]">
               Log in
             </p>
@@ -205,6 +210,10 @@ const Layouts = (props: Props) => {
           {children}
         </div>
       </div>
+      <ModalComponent
+        isOpen={isModalVisible}
+        isClose={() => setIsModalVisible(false)}
+      />
     </div>
   );
 };
