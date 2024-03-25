@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import tiktokLogo from "../assets/tiktok-logo.svg";
 import tiktokReward from "../assets/tiktok-reward.png";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddIcon from "@mui/icons-material/Add";
 import { LeftMenu } from "../components/layouts/LeftMenu.tsx";
+import { MenuHover } from "../components/layouts/MenuHover.tsx";
 
 type Props = {
   children: React.ReactNode;
@@ -12,6 +13,8 @@ type Props = {
 
 const Layouts = (props: Props) => {
   const { children } = props;
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
   return (
     <div className="bg-black">
       <div className="bg-black flex flex-row py-2 border-b-[1px] border-b-gray-700">
@@ -36,10 +39,16 @@ const Layouts = (props: Props) => {
               Log in
             </p>
           </div>
-          <MoreVertIcon
-            className="text-white ml-2"
-            style={{ fontSize: "28px" }}
-          />
+          <div
+            onClick={() => setIsMenuVisible(!isMenuVisible)}
+            className="block cursor-pointer"
+          >
+            <MoreVertIcon
+              className="text-white ml-2"
+              style={{ fontSize: "28px" }}
+            />
+            {isMenuVisible && <MenuHover />}
+          </div>
         </div>
       </div>
       <div className="flex">
