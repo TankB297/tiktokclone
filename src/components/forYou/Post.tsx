@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import avatar from "../../assets/avatar.png";
-import video from "../../assets/video1.mp4";
 import MusicNoteRoundedIcon from "@mui/icons-material/MusicNoteRounded";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import TextsmsIcon from "@mui/icons-material/Textsms";

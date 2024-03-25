@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { ModalComponent } from "../layouts/Modal.tsx";
 
 interface Props {
   imageName: string;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export const User = ({ imageName, userName, id }: Props) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   return (
     <div className="w-[226px] h-[302px] text-white relative">
       <img
@@ -29,10 +32,17 @@ export const User = ({ imageName, userName, id }: Props) => {
             style={{ fontSize: "16px" }}
           />
         </div>
-        <div className="w-[150px] px-5 py-3 bg-red-500 text-white text-center rounded-lg font-bold mt-2">
+        <div
+          onClick={() => setIsModalVisible(true)}
+          className="w-[150px] px-5 py-3 bg-red-500 hover:bg-red-700 cursor-pointer text-white text-center rounded-lg font-bold mt-2"
+        >
           Follow
         </div>
       </div>
+      <ModalComponent
+        isOpen={isModalVisible}
+        isClose={() => setIsModalVisible(false)}
+      />
     </div>
   );
 };

@@ -70,7 +70,10 @@ const Layouts = (props: Props) => {
               Log in to follow creators, like videos, and view comments.
             </p>
           </div>
-          <div className="bg-gray-800 p-3 border-2 border-red-500 mt-5 w-[85%] m-auto">
+          <div
+            onClick={() => setIsModalVisible(true)}
+            className="bg-gray-800 hover:bg-gray-700 cursor-pointer p-3 border-2 border-red-500 mt-5 w-[85%] m-auto"
+          >
             <p className="text-red-500 text-center text-lg">Log in</p>
           </div>
           <div className="py-5 border-t-2 border-t-gray-800 mt-5 w-[85%] m-auto relative">
