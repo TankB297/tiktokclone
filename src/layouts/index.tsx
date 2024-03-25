@@ -44,7 +44,7 @@ const Layouts = (props: Props) => {
       </div>
       <div className="flex">
         <div
-          className="bg-black w-[250px] overflow-scroll"
+          className="bg-black w-[230px] overflow-scroll no-scrollbar"
           style={{ height: "calc(100vh - 68px)" }}
         >
           <LeftMenu />
@@ -94,7 +94,7 @@ const Layouts = (props: Props) => {
               Careers
             </a>
           </div>
-          <div className="items-center pl-4 gap-1.5">
+          <div className="items-center pl-4 flex flex-wrap gap-x-1.5 gap-y-1 mt-3">
             <a
               href="/"
               className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
@@ -113,10 +113,84 @@ const Layouts = (props: Props) => {
             >
               TikTok LIVE Creator Network
             </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Developers
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Transparency
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              TikTok Rewards
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              TikTok Embeds
+            </a>
+          </div>
+          <div className="items-center pl-4 flex flex-wrap gap-x-1.5 gap-y-1 mt-3">
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Help
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Safety
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Terms
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Privacy Center
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Creator Portal
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline"
+            >
+              Community Guidelines
+            </a>
+            <a
+              href="/"
+              className="no-underline text-gray-500 font-extrabold text-[12px] hover:underline mt-2"
+            >
+              © 2024 TikTok
+            </a>
           </div>
         </div>
         <div
-          className="grow overflow-scroll"
+          className="grow overflow-scroll no-scrollbar"
           style={{ height: "calc(100vh - 68px)" }}
         >
           {children}
