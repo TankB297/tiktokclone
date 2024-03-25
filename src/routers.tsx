@@ -9,9 +9,9 @@ const Routers: React.FC = () => (
   <BrowserRouter>
     <Layouts>
       <Routes>
-        {/* <Route path="/" element={<ForYouPage />} /> */}
-        {/* <Route path="/" element={<Following />} /> */}
-        <Route path="/" element={<Explore />} />
+        <Route path="/following" element={<Following />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/" element={<ForYouPage />} />
       </Routes>
     </Layouts>
   </BrowserRouter>

@@ -3,7 +3,7 @@ import { Users } from "../../components/following/Users.tsx";
 
 export const Following = () => {
   return (
-    <div>
+    <div className="h-full">
       <Users />
     </div>
   );

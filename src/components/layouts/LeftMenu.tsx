@@ -10,12 +10,12 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 export const LeftMenu = () => {
   return (
     <div className="bg-black py-2">
-      <Tab IconName={HomeOutlinedIcon} label="For You" />
-      <Tab IconName={PersonAddAltOutlinedIcon} label="Following" />
-      <Tab IconName={GroupOutlinedIcon} label="Friends" />
-      <Tab IconName={ExploreOutlinedIcon} label="Explore" />
-      <Tab IconName={LiveTvOutlinedIcon} label="LIVE" />
-      <Tab IconName={PersonOutlineOutlinedIcon} label="Profile" />
+      <Tab path={'/'} IconName={HomeOutlinedIcon} label="For You" />
+      <Tab path={'/following'} IconName={PersonAddAltOutlinedIcon} label="Following" />
+      <Tab path={''} IconName={GroupOutlinedIcon} label="Friends" />
+      <Tab path={'/explore'} IconName={ExploreOutlinedIcon} label="Explore" />
+      <Tab path={''} IconName={LiveTvOutlinedIcon} label="LIVE" />
+      <Tab path={''} IconName={PersonOutlineOutlinedIcon} label="Profile" />
     </div>
   );
 };
