@@ -32,7 +32,10 @@ const Layouts = (props: Props) => {
           <SearchIcon className="text-gray-400" style={{ fontSize: 30 }} />
         </div>
         <div className="flex flex-row items-center mr-4">
-          <div className="flex flex-row items-center bg-gray-600 hover:bg-gray-700 py-2 rounded-md w-[120px] justify-center">
+          <div
+            onClick={() => setIsModalVisible(true)}
+            className="flex flex-row items-center bg-gray-600 hover:bg-gray-700 py-2 rounded-md w-[120px] justify-center"
+          >
             <AddIcon className="text-white" style={{ fontSize: "25px" }} />
             <p className="font-medium text-white text-[18px] ml-2">Upload</p>
           </div>
@@ -77,7 +80,7 @@ const Layouts = (props: Props) => {
               alt="tiktok-reward"
             />
             <div className="absolute px-5 top-6 left-7 w-full">
-              <p className="text-white font-bold text-sm">
+              <p className="text-white font-bold text-[14px]">
                 Create TikTok effects, get a reward
               </p>
             </div>
